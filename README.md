@@ -40,7 +40,7 @@ The GLEAM framework processes unconstrained, multi-modal sensor data from a movi
   python3 Neutralization_and_Pruning.py
 ```
 <p align='center'>
-    <img src="./figs/SEM_GT.png" alt="drawing" width="200"/>
+    <img src="./figs/stabilization.png" alt="drawing" width="200"/>
 </p>
 
 # Debug
