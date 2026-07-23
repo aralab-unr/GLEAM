@@ -43,7 +43,25 @@ The GLEAM framework processes unconstrained, multi-modal sensor data from a movi
     <img src="./figs/stablization.png" alt="drawing" width="1000"/>
     <img src="./figs/Figure_2_Tracking_Stability_Merged.png" alt="drawing" width="400"/>
     <img src="./figs/Figure_3_FFT_Spectrum_Annotated.png" alt="drawing" width="400"/>
+    <img src="./figs/Figure_4:_3-Segment_LiDAR_Gating_Analysis.png" alt="drawing" width="500"/>
+    <img src="./figs/Figure_5:_3-Segment_Semantic_Proof_(Lab).png" alt="drawing" width="500"/>
 </p>
+
+**3. Sub-Pixel Eulerian Motion Magnification (STB-VMM)**
+* **Process:** The purified, stabilized tensor is ingested by a Swin Transformer-based Video Motion Magnifier.
+  Download and pre-train the state-of-the-art motion magnification model [STB-VMM](https://github.com/RLado/STB-VMM) with the [dataset](https://groups.csail.mit.edu/graphics/deep_motion_mag/data/readme.txt)
+```
+    bash magnify_video.sh -mag 20 -i ../demo_video/videos -m ckpt/ckpt_e49.pth.tar -o STB-VMM_demo_x20_static -s ../demo_video/ -f 2 // (/demo_video/videos are video getting from the second step to get stabilization video of baseline and proposed method)
+```
+* **Output:** Because kinematic drift and parallax noise have been neutralized, the Vision Transformer exclusively attends to and amplifies the latent structural micro-vibrations without triggering kinematic hallucinations.
+
+  <p align='center'>
+    <img src="./figs/EVM-field.png" alt="drawing" width="1000"/>
+    <img src="./figs/EVM-lab.png" alt="drawing" width="1000"/>
+    <img src="./figs/XT_extraction_1.png" alt="drawing" width="1000"/>
+    <img src="./figs/Computational Scale.png" alt="drawing" width="1000"/>
+</p>
+
 
 # Debug
 ```
