@@ -1,0 +1,82 @@
+/**:
+  ros__parameters:
+
+    version: 1.1.1
+
+    adaptive: true
+    alignment: true
+    map3d: true
+
+    pointcloud/deskew: true
+    pointcloud/voxelize: true
+
+    imu/calibration: true
+    imu/intrinsics/accel/bias: [ 0.0, 0.0, 0.0 ]
+    imu/intrinsics/accel/sm:   [ 1.,  0.,  0.,
+                                 0.,  1.,  0.,
+                                 0.,  0.,  1. ]
+    imu/intrinsics/gyro/bias: [ 0.0, 0.0, 0.0 ]
+    # # ## Camera-LiDAR
+    # extrinsics/cam2lidar/t: [-0.041, -0.088, -0.003]
+    # extrinsics/cam2lidar/R: [-0.00, 1.0, -0.017,
+    #                          -0.01, -0.017, -1.0,
+    #                          -1.0, 0.0, 0.01]
+
+    ## Camera-LiDAR (Lucid camera 0)
+    # extrinsics/cam2lidar/t: [-0.144, -0.066, -0.136]
+    # extrinsics/cam2lidar/R: [-0.931, -0.366, -0.005,
+    #                           0.012, -0.017, -1.0,
+    #                           0.365, -0.931,  0.02]
+
+    extrinsics/cam2lidar/t: [-0.006, -0.115, -0.116]
+    extrinsics/cam2lidar/R: [-0.040,  0.999, -0.010,
+                             -0.030, -0.011, -1.0,
+                             -0.999, -0.040,  0.030]
+
+    # ## Camera-LiDAR (Lucid camera 1)
+    # extrinsics/cam2lidar/t: [-0.006, -0.077, -0.117]
+    # extrinsics/cam2lidar/R: [ 0.040, -0.999, -0.010,
+    #                           0.030,  0.011, -1.0,
+    #                           0.999,  0.040,  0.030]
+
+    ## LiDAR to Lucid camera 1
+    # extrinsics/cam2lidar/t: [  0.119,   0.000,  -0.074]
+    # extrinsics/cam2lidar/R: [  0.040,  0.030,  0.999,
+    #                           -0.999,  0.011,  0.040,
+    #                           -0.010, -1.000,  0.030]
+    
+    ## LiDAR-imu 
+    extrinsics/baselink2imu/t: [ 0.006253, -0.011775, 0.007645 ] 
+    extrinsics/baselink2imu/R: [ 1.,  0.,  0.,
+                                 0.,  1.,  0.,
+                                 0.,  0.,  1. ]
+    extrinsics/baselink2lidar/t: [ 0.,  0.,  0. ]
+    extrinsics/baselink2lidar/R: [ 1.,  0.,  0.,
+                                   0.,  1.,  0.,
+                                   0.,  0.,  1. ]
+    # # ## Camera Specs 
+    # params/cam/width: 1280
+    # params/cam/height: 720
+    # params/cam/fx: 1009.32421875
+    # params/cam/fy: 1009.32421875
+    # params/cam/cx: 632.487060546875
+    # params/cam/cy: 358.5774841308594
+
+    # Camera Specs () Lucid camera 0)
+    params/cam/width: 1464
+    params/cam/height: 1936
+    params/cam/fx: 1117.5595703125
+    params/cam/fy: 1115.374145507812
+    params/cam/cx: 961.3837468500133
+    params/cam/cy: 723.074844889743
+
+
+    ## Camera Specs () Lucid camera 1)
+    # params/cam/width: 1464
+    # params/cam/height: 1936
+    # params/cam/fx: 1118.305053710938
+    # params/cam/fy: 1115.828735351562
+    # params/cam/cx: 968.9590929954284
+    # params/cam/cy: 718.9518473280477
+
+    

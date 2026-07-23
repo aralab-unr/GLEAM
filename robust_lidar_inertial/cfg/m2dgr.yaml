@@ -1,0 +1,41 @@
+/**:
+  ros__parameters:
+
+    version: 1.1.1
+
+    adaptive: true
+    alignment: false
+
+    pointcloud/deskew: true
+    pointcloud/voxelize: true
+
+    imu/calibration: true
+    imu/intrinsics/accel/bias: [ 0.0, 0.0, 0.0 ]
+    imu/intrinsics/accel/sm:   [ 1.,  0.,  0.,
+                                 0.,  1.,  0.,
+                                 0.,  0.,  1. ]
+    imu/intrinsics/gyro/bias: [ 0.0, 0.0, 0.0 ]
+    ## Camera-LiDAR
+    extrinsics/cam2lidar/t: [0.00065, 0.65376, -0.30456]
+    extrinsics/cam2lidar/R: [ 0.0, -1.0, 0.0,
+                              0.0, 0.0, -1.0,
+                             1.0, 0.0, 0.0]
+    ## LiDAR-imu 
+    extrinsics/baselink2imu/t: [ 0.27255, -0.00053, 0.17954] 
+    # extrinsics/baselink2imu/t: [ 0.006253, -0.011775, 0.007645 ]
+    extrinsics/baselink2imu/R: [ 1.,  0.,  0.,
+                                 0.,  1.,  0.,
+                                 0.,  0.,  1. ]
+    extrinsics/baselink2lidar/t: [ 0.,  0.,  0. ]
+    extrinsics/baselink2lidar/R: [ 1.,  0.,  0.,
+                                   0.,  1.,  0.,
+                                   0.,  0.,  1. ]
+    ## Camera Specs 
+    params/cam/width: 640
+    params/cam/height: 480
+    params/cam/fx: 617.971050917033
+    params/cam/fy: 616.445131524790
+    params/cam/cx: 327.710279392468
+    params/cam/cy: 253.976983707814
+
+    
